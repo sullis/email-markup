@@ -1,0 +1,131 @@
+{
+  "name": "email-markup-order",
+  "info": {
+    "contact": {
+      "name": "email-markup",
+      "url": "https://github.com/sullis/email-markup"
+    }
+   },
+  "models": {
+    "address": {
+      "fields": [
+        { "name": "addressCountry", "type": "string" },
+        { "name": "addressLocality", "type": "string" },
+        { "name": "addressRegion", "type": "string" },
+        { "name": "postalCode", "type": "string" },
+        { "name": "postOfficeBoxNumber", "type": "string" },
+        { "name": "streetAddress", "type": "string" }
+      ]
+    },
+    "customer": {
+      "fields": [
+        { "name": "name",  "type": "string" }
+      ]
+    },
+    "order": {
+      "fields": [
+        { "name": "billingAddress", "type": "address", "required": "false" },
+        { "name": "customer", "type": "customer", "required": "true" },
+        { "name": "discount", "type": "decimal", "required": "false"},
+        { "name": "discountCurrency", "type": "string", "required": "false" },
+        { "name": "isGift", "type": "boolean", "default": "false" },
+        { "name": "merchant", "type": "merchant" },
+        { "name": "orderNumber", "type": "string" },
+        { "name": "priceCurrency", "type": "string" },
+        { "name": "priceSpecification", "type": "price_specification" },
+        { "name": "price", "type": "decimal" },
+        { "name": "acceptedOffer", "type": "[offer]" },
+        { "name": "url", "type": "string" },
+        { "name": "orderStatus", "type": "string" },
+        { "name": "paymentMethod", "type": "payment_method" },
+        { "name": "paymentMethodId", "type": "string" },
+        { "name": "orderDate", "type": "date-time-iso8601" }
+      ]
+    },
+    "merchant": {
+      "fields": [
+        { "name": "name",  "type": "string" }
+      ]
+    },
+    "offer": {
+      "fields": [
+        { "name": "acceptedPaymentMethod", "type": "payment_method" },
+        { "name": "addOn", "type": "offer" },
+        { "name": "advanceBookingRequirement", "type": "string" },
+        { "name": "aggregateRating", "type": "string" },
+        { "name": "availability", "type": "string" },
+        { "name": "availabilityEnds", "type": "date-time-iso8601" },
+        { "name": "availabilityStarts", "type": "date-time-iso8601" },
+        { "name": "availableAtOrFrom", "type": "place" },
+        { "name": "availableDeliveryMethod", "type": "string" },
+        { "name": "businessFunction", "type": "string" },
+        { "name": "category", "type": "string" },
+        { "name": "deliveryLeadTime", "type": "string" },
+        { "name": "eligibleCustomerType", "type": "string" },
+        { "name": "eligibleDuration", "type": "string" },
+        { "name": "eligibleQuantity", "type": "string" },
+        { "name": "eligibleRegion", "type": "string" },
+        { "name": "eligibleTransactionVolume", "type": "string" },
+        { "name": "gtin13", "type": "string" },
+        { "name": "gtin14", "type": "string" },
+        { "name": "gtin8", "type": "string" },
+        { "name": "includesObject", "type": "string", "required": "false" },
+        { "name": "ineligibleRegion", "type": "string" },
+        { "name": "inventoryLevel", "type": "string" },
+        { "name": "itemCondition", "type": "string", "required": "false" },
+        { "name": "itemOffered", "type": "product" },
+        { "name": "mpn", "type": "string" },
+        { "name": "price", "type": "decimal" },
+        { "name": "priceCurrency", "type": "string" },
+        { "name": "priceSpecification", "type": "price_specification" },
+        { "name": "priceValidUntil", "type": "string" },
+        { "name": "seller", "type": "organization" },
+        { "name": "serialNumber", "type": "string" },
+        { "name": "sku", "type": "string" },
+        { "name": "validFrom", "type": "date-time-iso8601" },
+        { "name": "validThrough", "type": "date-time-iso8601" }
+      ]
+    },
+    "organization": {
+      "fields": [
+        { "name": "address",  "type": "address" },
+        { "name": "legal_name",  "type": "string" }
+      ]
+    },
+    "payment_method": {
+      "fields": [
+        { "name": "name",  "type": "string", "default": "http://schema.org/CreditCard" }
+      ]
+    },
+    "place": {
+      "fields": [
+        { "name": "address", "type": "address" },
+        { "name": "logo", "type": "string" },
+        { "name": "map", "type": "string" },
+        { "name": "telephone", "type": "string" }
+      ]
+    },
+    "price_specification": {
+      "fields": [
+        { "name": "eligibleQuantity", "type": "string" },
+        { "name": "eligibleTransactionVolume", "type": "string" },
+        { "name": "maxPrice", "type": "decimal" },
+        { "name": "minPrice", "type": "decimal" },
+        { "name": "price", "type": "decimal" },
+        { "name": "priceCurrency", "type": "string" },
+        { "name": "validFrom", "type": "date-time-iso8601" },
+        { "name": "validThrough", "type": "date-time-iso8601" },
+        { "name": "valueAddedTaxIncluded", "type": "boolean", "default": "false" }
+      ]
+    },
+    "product": {
+      "fields": [
+        { "name": "productID", "type": "string" },
+        { "name": "sku", "type": "string" },
+        { "name": "brand", "type": "organization" },
+        { "name": "manufacturer", "type": "organization", "required": "false" },
+        { "name": "color", "type": "string", "required": "false" }
+      ]
+    }
+  }
+}
