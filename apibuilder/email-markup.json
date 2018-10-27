@@ -6,7 +6,33 @@
       "url": "https://github.com/sullis/email-markup"
     }
    },
+  "enums": {
+    "action_types": {
+      "values": [ "ConfirmAction", "SaveAction" ]
+    }
+  },
   "models": {
+    "one_click_action": {
+      "fields": [
+        { "name": "at_context", "type": "string", "default": "http://schema.org" },
+        { "name": "at_type", "type": "string", "default": "EmailMessage" },
+        { "name": "potentialAction", "type": "potential_action" },
+        { "name": "description", "type": "string" }
+      ]
+    },
+    "action_handler": {
+      "fields": [
+        { "name": "at_type", "type": "string", "default": "HttpActionHandler" },
+        { "name": "url", "type": "string" }
+      ]
+    },
+    "potential_action": {
+      "fields": [
+        { "name": "at_type", "type": "string" },
+        { "name": "name", "type": "string" },
+        { "name": "handler", "type": "action_handler" }
+      ]
+    },
     "address": {
       "fields": [
         { "name": "addressCountry", "type": "string" },
