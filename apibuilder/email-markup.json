@@ -10,12 +10,22 @@
     "action_types": {
       "values": [
         { "name" : "ConfirmAction" },
-        { "name" : "SaveAction" }
+        { "name" : "SaveAction" },
+        { "name" : "TrackAction" },
+        { "name" : "ViewAction" }
       ]
     }
   },
   "models": {
     "one_click_action": {
+      "fields": [
+        { "name": "at_context", "type": "string", "default": "http://schema.org" },
+        { "name": "at_type", "type": "string", "default": "EmailMessage" },
+        { "name": "potentialAction", "type": "potential_action" },
+        { "name": "description", "type": "string" }
+      ]
+    },
+    "goto_action": {
       "fields": [
         { "name": "at_context", "type": "string", "default": "http://schema.org" },
         { "name": "at_type", "type": "string", "default": "EmailMessage" },
@@ -32,8 +42,9 @@
     "potential_action": {
       "fields": [
         { "name": "at_type", "type": "action_types" },
+        { "name": "handler", "type": "action_handler", "required": "false" },
         { "name": "name", "type": "string" },
-        { "name": "handler", "type": "action_handler" }
+        { "name": "target", "type": "string" }
       ]
     },
     "address": {
