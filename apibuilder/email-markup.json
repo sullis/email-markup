@@ -8,7 +8,9 @@
    },
   "enums": {
     "action_types": {
-      "values": [ "ConfirmAction", "SaveAction" ]
+      "values": [
+        { "name" : "ConfirmAction" },
+        { "name" : "SaveAction" ]
     }
   },
   "models": {
