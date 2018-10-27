@@ -28,7 +28,7 @@
     },
     "potential_action": {
       "fields": [
-        { "name": "at_type", "type": "string" },
+        { "name": "at_type", "type": "action_types" },
         { "name": "name", "type": "string" },
         { "name": "handler", "type": "action_handler" }
       ]
