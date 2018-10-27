@@ -10,7 +10,8 @@
     "action_types": {
       "values": [
         { "name" : "ConfirmAction" },
-        { "name" : "SaveAction" ]
+        { "name" : "SaveAction" }
+      ]
     }
   },
   "models": {
