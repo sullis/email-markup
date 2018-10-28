@@ -115,6 +115,7 @@
         { "name": "itemCondition", "type": "string", "required": "false" },
         { "name": "itemOffered", "type": "product" },
         { "name": "mpn", "type": "string", "required": "false" },
+        { "name": "name", "type": "string" },
         { "name": "price", "type": "decimal" },
         { "name": "priceCurrency", "type": "string" },
         { "name": "priceSpecification", "type": "price_specification", "required": "false" },
@@ -162,7 +163,7 @@
       "fields": [
         { "name": "productID", "type": "string" },
         { "name": "sku", "type": "string" },
-        { "name": "brand", "type": "organization" },
+        { "name": "brand", "type": "organization", "required": "false" },
         { "name": "manufacturer", "type": "organization", "required": "false" },
         { "name": "color", "type": "string", "required": "false" }
       ]
