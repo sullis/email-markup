@@ -72,7 +72,7 @@
         { "name": "merchant", "type": "merchant" },
         { "name": "orderNumber", "type": "string" },
         { "name": "priceCurrency", "type": "string" },
-        { "name": "priceSpecification", "type": "price_specification" },
+        { "name": "priceSpecification", "type": "price_specification", "required": "false" },
         { "name": "price", "type": "decimal" },
         { "name": "acceptedOffer", "type": "[offer]" },
         { "name": "url", "type": "string" },
