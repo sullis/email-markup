@@ -118,7 +118,7 @@
         { "name": "price", "type": "decimal" },
         { "name": "priceCurrency", "type": "string" },
         { "name": "priceSpecification", "type": "price_specification", "required": "false" },
-        { "name": "priceValidUntil", "type": "string",, "required": "false" },
+        { "name": "priceValidUntil", "type": "string", "required": "false" },
         { "name": "seller", "type": "organization", "required": "false" },
         { "name": "serialNumber", "type": "string", "required": "false"},
         { "name": "sku", "type": "string", "required": "false" },
