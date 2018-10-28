@@ -111,7 +111,7 @@
         { "name": "gtin8", "type": "string", "required": "false" },
         { "name": "includesObject", "type": "string", "required": "false" },
         { "name": "ineligibleRegion", "type": "string", "required": "false" },
-        { "name": "inventoryLevel", "type": "string" },
+        { "name": "inventoryLevel", "type": "string", "required": "false" },
         { "name": "itemCondition", "type": "string", "required": "false" },
         { "name": "itemOffered", "type": "product" },
         { "name": "mpn", "type": "string", "required": "false" },
